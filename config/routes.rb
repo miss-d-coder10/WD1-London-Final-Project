@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :vineyards
   scope :api do
     resources :users, except: [:create]
     post 'register', to: 'auth#register'
