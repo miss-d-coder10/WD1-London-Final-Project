@@ -17,14 +17,14 @@ User.create!([{
   password_confirmation: "password",
   profile_image: File.open(File.join(Rails.root, "db/images/avatar_default.png")),
   bio: "I love all wines"
-# },{
-#   username: "DaraDC",
-#   email: "dara.dc10@gmail.com",
-#   password: "password",
-#   password_confirmation: "password",
-#   profile_image: File.open("images/avatar6.jpg"),
-#   bio: "Wine explorer"
-# },{
+},{
+  username: "DaraDC",
+  email: "dara.dc10@gmail.com",
+  password: "password",
+  password_confirmation: "password",
+  profile_image: File.open(File.join(Rails.root,"db/images/avatar6.jpg")),
+  bio: "Wine explorer"
+}
 #   username: "CarolineWilson",
 #   email: "caroline.wilson@gmail.com",
 #   password: "password",
@@ -52,7 +52,7 @@ User.create!([{
 #   password_confirmation: "password",
 #   profile_image: File.open("images/avatar5.jpg"),
 #   bio: "Rock and roll with wine!"
-}])
+])
 
 # paul = User.create!({
 #   username: "paul.langham",
