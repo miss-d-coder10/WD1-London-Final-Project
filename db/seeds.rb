@@ -52,7 +52,7 @@ u3 = User.create!({
   profile_image: File.open(File.join(Rails.root, "db/images/avatar4.png")),
   bio: "Just love wines!"
 })
-u3 = User.create!({
+u4 = User.create!({
   username: "mickyginger",
   email: "mike.hayden@ga.co",
   password: "password",
@@ -60,7 +60,6 @@ u3 = User.create!({
   profile_image: File.open(File.join(Rails.root, "db/images/avatar5.jpg")),
   bio: "Rock and roll with wine!"
 })
-
 
 #vineyard owners
 paul = User.create!({
@@ -91,7 +90,7 @@ rathfinnyestate = User.create!({
 })
 
 
-Vineyard.create!([{
+becketts = Vineyard.create!(
   vineyard_name: "a’Beckett’s Vineyard",
   email: "http://www.abecketts.co.uk/contact/",
   website_url: "http://www.abecketts.co.uk/",
@@ -114,51 +113,60 @@ Vineyard.create!([{
   image_three: File.open(File.join(Rails.root, "db/images/abecketts_3.jpg")),
   image_four: File.open(File.join(Rails.root, "db/images/abecketts_4.jpg")),
   user: paul
-},{
-  vineyard_name: "Denbies Wine Estate",
-  email: "customerservices@denbiesvineyard.co.uk",
-  website_url: "http://www.denbies.co.uk/",
-  phone: "01306 876616 (ext. 0)",
-  address: "London Road",
-  city: "Dorking",
-  region: "Surrey",
-  postcode: "RH5 6AA",
-  country: "United Kingdom",
-  specialty: "Finest sparkling and all table wines",
-  description: "The Denbies Estate, based in Dorking, Surrey, has been family owned and run since 1984. Denbies vineyard was planted in 1986, and since then has become one of the largest wine producers in the UK. Denbies core business is agriculture and we are pleased to be able to offer visitors an insight into wine production in the UK. Denbies wine now competes on an international level, including multiple gold awards for sparkling wine production, the first ever gold for an English rose wine and most recently an international gold for Denbies Noble Harvest Dessert wine. We are honoured over the years to have welcomed several members of the Royal family to the estate, completing the historical connections which date back to Prince Albert in 1851. The Surrey Hills is a beautiful area to live in and while you are visiting do take advantage of the surrounding areas, including 7 miles of public footpath which trail throughout the vineyard.",
-  pet_friendly: false,
-  holiday: true,
-  tours: true,
-  events: true,
-  family_friendly: true,
-  cover_image: File.open(File.join(Rails.root, "db/images/denbies_cover1.jpg")),
-  image_one: File.open(File.join(Rails.root, "db/images/denbies4.jpg")),
-  image_two: File.open(File.join(Rails.root, "db/images/denbies_1.jpg")),
-  image_three: File.open(File.join(Rails.root, "db/images/denbies_2.jpg")),
-  image_four: File.open(File.join(Rails.root, "db/images/denbies_3.jpg")),
-  user: denbies
-  },{
-  vineyard_name: "Rathfinny Wine Estate",
-  email: "customerservices@denbiesvineyard.co.uk",
-  website_url: "http://rathfinnyestate.com/",
-  phone: "01323 871031",
-  address: "White Way, Polegate",
-  city: "Alfriston",
-  region: "East Sussex",
-  postcode: "BN26 5TU",
-  country: "United Kingdom",
-  specialty: "Sussex Sparkling Wine",
-  description: "We established the Rathfinny Wine Estate in 2010 near Alfriston in the South Downs of Sussex, one of England’s exceptional natural landscapes, with the express intention of producing some of the world’s best sparkling wine. Whether it is by tasting our wines or by visiting our Estate, we want you to really experience Rathfinny and our commitment to creating exceptional Sussex Sparkling wine from this beautiful and iconic part of southern England",
-  pet_friendly: true,
-  holiday: true,
-  tours: true,
-  events: true,
-  family_friendly: true,
-  cover_image: File.open(File.join(Rails.root, "db/images/rathfinny_cover1_edited.jpg")),
-  image_one: File.open(File.join(Rails.root, "db/images/rathfinny1.jpg")),
-  image_two: File.open(File.join(Rails.root, "db/images/rathfinny2.jpg")),
-  image_three: File.open(File.join(Rails.root, "db/images/rathfinny3.jpg")),
-  image_four: File.open(File.join(Rails.root, "db/images/rathfinny4.jpg")),
-  user: rathfinnyestate
-}
-])
+  )
+# },{
+#   vineyard_name: "Denbies Wine Estate",
+#   email: "customerservices@denbiesvineyard.co.uk",
+#   website_url: "http://www.denbies.co.uk/",
+#   phone: "01306 876616 (ext. 0)",
+#   address: "London Road",
+#   city: "Dorking",
+#   region: "Surrey",
+#   postcode: "RH5 6AA",
+#   country: "United Kingdom",
+#   specialty: "Finest sparkling and all table wines",
+#   description: "The Denbies Estate, based in Dorking, Surrey, has been family owned and run since 1984. Denbies vineyard was planted in 1986, and since then has become one of the largest wine producers in the UK. Denbies core business is agriculture and we are pleased to be able to offer visitors an insight into wine production in the UK. Denbies wine now competes on an international level, including multiple gold awards for sparkling wine production, the first ever gold for an English rose wine and most recently an international gold for Denbies Noble Harvest Dessert wine. We are honoured over the years to have welcomed several members of the Royal family to the estate, completing the historical connections which date back to Prince Albert in 1851. The Surrey Hills is a beautiful area to live in and while you are visiting do take advantage of the surrounding areas, including 7 miles of public footpath which trail throughout the vineyard.",
+#   pet_friendly: false,
+#   holiday: true,
+#   tours: true,
+#   events: true,
+#   family_friendly: true,
+#   cover_image: File.open(File.join(Rails.root, "db/images/denbies_cover1.jpg")),
+#   image_one: File.open(File.join(Rails.root, "db/images/denbies4.jpg")),
+#   image_two: File.open(File.join(Rails.root, "db/images/denbies_1.jpg")),
+#   image_three: File.open(File.join(Rails.root, "db/images/denbies_2.jpg")),
+#   image_four: File.open(File.join(Rails.root, "db/images/denbies_3.jpg")),
+#   user: denbies
+#   },{
+#   vineyard_name: "Rathfinny Wine Estate",
+#   email: "customerservices@denbiesvineyard.co.uk",
+#   website_url: "http://rathfinnyestate.com/",
+#   phone: "01323 871031",
+#   address: "White Way, Polegate",
+#   city: "Alfriston",
+#   region: "East Sussex",
+#   postcode: "BN26 5TU",
+#   country: "United Kingdom",
+#   specialty: "Sussex Sparkling Wine",
+#   description: "We established the Rathfinny Wine Estate in 2010 near Alfriston in the South Downs of Sussex, one of England’s exceptional natural landscapes, with the express intention of producing some of the world’s best sparkling wine. Whether it is by tasting our wines or by visiting our Estate, we want you to really experience Rathfinny and our commitment to creating exceptional Sussex Sparkling wine from this beautiful and iconic part of southern England",
+#   pet_friendly: true,
+#   holiday: true,
+#   tours: true,
+#   events: true,
+#   family_friendly: true,
+#   cover_image: File.open(File.join(Rails.root, "db/images/rathfinny_cover1_edited.jpg")),
+#   image_one: File.open(File.join(Rails.root, "db/images/rathfinny1.jpg")),
+#   image_two: File.open(File.join(Rails.root, "db/images/rathfinny2.jpg")),
+#   image_three: File.open(File.join(Rails.root, "db/images/rathfinny3.jpg")),
+#   image_four: File.open(File.join(Rails.root, "db/images/rathfinny4.jpg")),
+#   user: rathfinnyestate
+# }
+# ]
+# )
+
+
+
+u1.comments.create!(rating: 4, vineyard: becketts, body: "I love wine and to unwind, perfect place to be! Cant wait to explore more wines")
+u2.comments.create!(rating: 5, vineyard: becketts, body: "I felt at home here! I had a wonderful time. So much drinking!")
+u3.comments.create!(rating: 4, vineyard: becketts, body: "My standard has been met! Fine wines everywhere! I love it!")
+u4.comments.create!(rating: 3, vineyard: becketts, body: "I forgot everything as I got too drunk with all the wines")
