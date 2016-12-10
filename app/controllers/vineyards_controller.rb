@@ -1,6 +1,6 @@
 class VineyardsController < ApplicationController
   before_action :set_vineyard, only: [:show, :update, :destroy]
-
+  skip_before_action :authenticate_user!, only: [:index, :show]
   # GET /vineyards
   def index
     @vineyards = Vineyard.all
@@ -17,7 +17,7 @@ class VineyardsController < ApplicationController
   def create
     @vineyard = Vineyard.new(vineyard_params)
     # @vineyard = Vineyard.new(Uploader.upload(vineyard_params))
-
+    # @vineyard.user = current_user
     if @vineyard.save
       render json: @vineyard, status: :created, location: @vineyard
     else

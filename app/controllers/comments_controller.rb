@@ -1,5 +1,6 @@
 class CommentsController < ApplicationController
   before_action :set_comment, only: [:show, :update, :destroy]
+  skip_before_action :authenticate_user!, only: [:index, :show]
 
   # GET /comments
   def index
@@ -16,6 +17,7 @@ class CommentsController < ApplicationController
   # POST /comments
   def create
     @comment = Comment.new(comment_params)
+    @comment.user = current_user
 
     if @comment.save
       render json: @comment, status: :created, location: @comment
@@ -26,12 +28,25 @@ class CommentsController < ApplicationController
 
   # PATCH/PUT /comments/1
   def update
+
+  if @comment.user == current_user
+
     if @comment.update(comment_params)
       render json: @comment
     else
       render json: @comment.errors, status: :unprocessable_entity
     end
+
+  else
+    render json: { errors: ["Unauthorized"] }, status: 401
   end
+  end
+
+
+
+
+
+
 
   # DELETE /comments/1
   def destroy

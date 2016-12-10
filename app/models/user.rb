@@ -6,6 +6,7 @@ class User < ApplicationRecord
 
   has_one :vineyard
   has_many :comments
+  
   mount_uploader :profile_image, ImageUploader
 
 end
