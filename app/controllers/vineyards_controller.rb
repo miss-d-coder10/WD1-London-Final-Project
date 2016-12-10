@@ -16,6 +16,7 @@ class VineyardsController < ApplicationController
   # POST /vineyards
   def create
     @vineyard = Vineyard.new(vineyard_params)
+    # @vineyard = Vineyard.new(Uploader.upload(vineyard_params))
 
     if @vineyard.save
       render json: @vineyard, status: :created, location: @vineyard

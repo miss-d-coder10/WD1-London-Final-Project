@@ -4,4 +4,5 @@ class UserSerializer < ActiveModel::Serializer
   def profile_image
     object.profile_image.url
   end
+
 end
