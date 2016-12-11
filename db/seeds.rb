@@ -116,11 +116,11 @@ becketts = Vineyard.create!({
   tours: true,
   events: false,
   family_friendly: true,
-  cover_image: File.open(File.join(Rails.root, "db/images/abecketts_coverimage.jpg")),
-  image_one: File.open(File.join(Rails.root, "db/images/abecketts_one.jpg")),
-  image_two: File.open(File.join(Rails.root, "db/images/abecketts_2.jpg")),
-  image_three: File.open(File.join(Rails.root, "db/images/abecketts_3.jpg")),
-  image_four: File.open(File.join(Rails.root, "db/images/abecketts_4.jpg")),
+  cover_image: "images/abecketts_coverimage.jpg",
+  image_one: "images/abecketts_one.jpg",
+  image_two: "images/abecketts_2.jpg",
+  image_three: "images/abecketts_3.jpg",
+  image_four: "images/abecketts_4.jpg",
   user: paul
   })
 
@@ -141,11 +141,11 @@ denbies = Vineyard.create!({
   tours: true,
   events: true,
   family_friendly: true,
-  cover_image: File.open(File.join(Rails.root, "db/images/denbies_cover1.jpg")),
-  image_one: File.open(File.join(Rails.root, "db/images/denbies4.jpg")),
-  image_two: File.open(File.join(Rails.root, "db/images/denbies_1.jpg")),
-  image_three: File.open(File.join(Rails.root, "db/images/denbies_2.jpg")),
-  image_four: File.open(File.join(Rails.root, "db/images/denbies_3.jpg")),
+  cover_image:  "images/denbies_cover1.jpg",
+  image_one:  "images/denbies4.jpg",
+  image_two:  "images/denbies_1.jpg",
+  image_three:  "images/denbies_2.jpg",
+  image_four:  "images/denbies_3.jpg",
   user: denbies
 })
 
@@ -166,11 +166,11 @@ rathfinny = Vineyard.create!({
   tours: true,
   events: true,
   family_friendly: true,
-  cover_image: File.open(File.join(Rails.root, "db/images/rathfinny_cover1_edited.jpg")),
-  image_one: File.open(File.join(Rails.root, "db/images/rathfinny1.jpg")),
-  image_two: File.open(File.join(Rails.root, "db/images/rathfinny2.jpg")),
-  image_three: File.open(File.join(Rails.root, "db/images/rathfinny3.jpg")),
-  image_four: File.open(File.join(Rails.root, "db/images/rathfinny4.jpg")),
+  cover_image:  "images/rathfinny_cover1_edited.jpg",
+  image_one:  "images/rathfinny1.jpg",
+  image_two:  "images/rathfinny2.jpg",
+  image_three:  "images/rathfinny3.jpg",
+  image_four:  "images/rathfinny4.jpg",
   user: rathfinnyestate
 })
 

@@ -1,7 +1,7 @@
 class Uploader
 
   def self.split_base64(uri_str)
-    if uri_str_match(%r{^data:(.*?);(.*?),(.*)$})
+    if uri_str.match(%r{^data:(.*?);(.*?),(.*)$})
       return { type: $1, encoder: $2, data: $3, extension: $1.split('/')[1] }
     else
       return nil
@@ -26,7 +26,7 @@ class Uploader
       }
 
       uploaded_file = ActionDispatch::Http::UploadedFile.new(img_params)
-      params[:image] = uploaded_file
+      params[:profile_image] = uploaded_file
       params.delete(:base64)
     end
     return params

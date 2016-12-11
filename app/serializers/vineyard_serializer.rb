@@ -3,25 +3,7 @@ class VineyardSerializer < ActiveModel::Serializer
   has_one :user
   has_many :comments
 
-  def cover_image
-    object.cover_image.url
-  end
 
-  def image_one
-    object.image_one.url
-  end
-
-  def image_two
-    object.image_two.url
-  end
-
-  def image_three
-    object.image_three.url
-  end
-
-  def image_four
-    object.image_four.url
-  end
 
 
 

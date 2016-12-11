@@ -28,29 +28,27 @@ class CommentsController < ApplicationController
 
   # PATCH/PUT /comments/1
   def update
+    if @comment.user == current_user
 
-  if @comment.user == current_user
+      if @comment.update(comment_params)
+        render json: @comment
+      else
+        render json: @comment.errors, status: :unprocessable_entity
+      end
 
-    if @comment.update(comment_params)
-      render json: @comment
     else
-      render json: @comment.errors, status: :unprocessable_entity
+      render json: { errors: ["Unauthorized"] }, status: 401
     end
-
-  else
-    render json: { errors: ["Unauthorized"] }, status: 401
   end
-  end
-
-
-
-
-
 
 
   # DELETE /comments/1
   def destroy
+    if @comment.user == current_user || !@comment.user
     @comment.destroy
+    else
+      render json: { errors: ["Unauthorized"] }, status: 401
+    end
   end
 
   private
