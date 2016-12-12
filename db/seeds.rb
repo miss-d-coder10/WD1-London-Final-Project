@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-["users"].each do |table_name|
+["users", "vineyards", "comments"].each do |table_name|
   ActiveRecord::Base.connection.execute("TRUNCATE #{table_name} RESTART IDENTITY CASCADE")
 end
 
@@ -98,6 +98,32 @@ rathfinnyestate = User.create!({
   bio: "Home away from home."
 })
 
+camelValleyOwner = User.create!({
+  username: "BobLindo",
+  email: "bob.l@camelvalley.com",
+  password: "password",
+  password_confirmation: "password",
+  profile_image: File.open(File.join(Rails.root, "db/images/camelvalley_logo.jpg")),
+  bio: "We produce World Class Wines."
+})
+
+threeChoirsOwner = User.create!({
+  username: "three_choirs_wickham",
+  email: "kevin@threechoirs.com",
+  password: "password",
+  password_confirmation: "password",
+  profile_image: File.open(File.join(Rails.root, "db/images/threechoirs_logo.png")),
+  bio: "Be prepared to have a great time!"
+})
+
+wykenOwner = User.create!({
+  username: "wyken_vineyard",
+  email: "wyken@wykenvineyards.com",
+  password: "password",
+  password_confirmation: "password",
+  profile_image: File.open(File.join(Rails.root, "db/images/wyken_logo.jpg")),
+  bio: "Where you will find the finest English Wine"
+})
 
 becketts = Vineyard.create!({
   vineyard_name: "a’Beckett’s Vineyard",
@@ -174,9 +200,86 @@ rathfinny = Vineyard.create!({
   user: rathfinnyestate
 })
 
+camelValley = Vineyard.create!({
+  vineyard_name: "Camel Valley Cornwall",
+  email: "info@camelvalley.com",
+  website_url: "https://www.camelvalley.com",
+  phone: "01208 77959",
+  address: "Nanstallon",
+  city: "Bodmin",
+  region: "Cornwall",
+  postcode: "PL30 5LG",
+  country: "United Kingdom",
+  specialty: "Cornwall Brut",
+  description: "We are family run,Award winning Camel Valley Vineyard, in Bodmin, Cornwall, produces red, white and sparkling wines. Tours, tastings, and wine by the bottle or glass are available. We believe that the idyllic position on the sunny slopes by the Camel River, along with well-chosen grapes and a strong passion for wine. You can sit out on the terrace overlooking the stunning views and sip glasses of Camel Valley’s own wine, or choose one of the tours: a guided tour, a grand tour and tasting experience. We have two beautiful cottages for your stay and are nestled within the vineyard.",
+  pet_friendly: false,
+  holiday: true,
+  tours: true,
+  events: true,
+  family_friendly: true,
+  cover_image:  "/images/camelvalley_coverimage.jpg",
+  image_one:  "/images/camelvalley_image1.jpg",
+  image_two:  "/images/camelvalley_image2.jpg",
+  image_three:  "/images/camelvalley_.image3jpg",
+  image_four:  "/images/camelvalley_image4.jpg",
+  user: camelValleyOwner
+})
+
+threeChoirs = Vineyard.create!({
+  vineyard_name: "Three Choirs Wickham Vineyard",
+  email: "info@threechoirs.com",
+  website_url: "https://www.three-choirs-vineyards.co.uk",
+  phone: "01531 890223",
+  address: "Botley Road Shedfield",
+  city: "Wickham",
+  region: "Hampshire",
+  postcode: "SO32 2HL",
+  country: "United Kingdom",
+  specialty: "Still White, Red and Rosé. Sparkling white",
+  description: "With around 80 acres, Three Choirs is one of the larger vineyards in the country. It is also one of the most long-established, being first planted in 1973 (first vintage 1976). Three Choirs continues its innovative wine production, with a number of acres set aside as an experimental vineyard, planting new varieties and monitoring their success. It is from here that a number of new varieties now more widely grown first emerged. Three Choirs lies within a unique microclimate, sheltered by the Malverns and the Brecon Beacons. It has an average rainfall of 20 inches per annum. The temperature controlled winery houses all stainless steel tanks, with warm room for red wines and French and American oak barriques. Winery improvements are paying dividends especially for red wines, but also for their wide range Quality still wines and sparkling white wines, which are their traditional mainstay. Three Choirs makes a lot of still and sparkling wine for nearby vineyards and those farther afield.",
+  pet_friendly: false,
+  holiday: true,
+  tours: true,
+  events: true,
+  family_friendly: true,
+  cover_image:  "/images/threechoirs_coverimage.jpg",
+  image_one:  "/images/threechoirs_image5.jpg",
+  image_two:  "/images/threechoirs_image2.jpg",
+  image_three:  "/images/threechoirs_.image3jpg",
+  image_four:  "/images/threechoirs_image4.jpg",
+  user: threeChoirsOwner
+})
+
+wykensVineyard = Vineyard.create!({
+  vineyard_name: "Wyken Vineyard",
+  email: "info@threechoirs.com",
+  website_url: "http://www.wykenvineyards.co.uk/",
+  phone: "01359 250262",
+  address: "Wyken Road",
+  city: "Bury St Edmunds",
+  region: "Suffolk",
+  postcode: "IP31 2DW",
+  country: "United Kingdom",
+  specialty: "Wyken's Bacchus and Moonshine",
+  description: "Planted in 1988 on a south facing slope, with some 12,000 vines on seven acres. The vines, trained in the Double Guyot style, thrive on the sandy loam over chalk. On average we produce some 12,000 bottles a year, and these are all sold through our Shop and Restaurant. You are free to walk to the vineyard from the Leaping Hare over our Home Meadow and through a most beautiful ancient woodland. We have a garden topiary, herbs, roses, box, fruit trees -- and meandering peacocks, guinea fowl and chickens -- snuggle up to the Elizabethan manor house, with head-high yew hedges serving as windbreaks, essential in East Anglia, a region renowned for its 'lazy winds'.",
+  pet_friendly: true,
+  holiday: true,
+  tours: true,
+  events: true,
+  family_friendly: true,
+  cover_image:  "/images/wyken_coverimage2.jpg",
+  image_one:  "/images/wyken_image1.jpg",
+  image_two:  "/images/wyken_image2.jpg",
+  image_three:  "/images/wyken_.image3jpg",
+  image_four:  "/images/wyken_image4.jpg",
+  user: wykenOwner
+})
+
 u1.comments.create!(rating: 4, vineyard: rathfinny, body: "I love wine and to unwind, perfect place to be! Cant wait to explore more wines")
 u2.comments.create!(rating: 5, vineyard: rathfinny, body: "I felt at home here! I had a wonderful time. So much drinking!")
 u3.comments.create!(rating: 4, vineyard: denbies, body: "My standard has been met! Fine wines everywhere! I love it!")
 u4.comments.create!(rating: 3, vineyard: denbies, body: "I forgot everything as I got too drunk with all the wines")
 u5.comments.create!(rating: 4, vineyard: denbies, body: "Perfectness in all wines! Perfect experience")
 u6.comments.create!(rating: 2, vineyard: becketts, body: "It was quite boring! Not many to do, just drank what they have!")
+u1.comments.create!(rating: 5, vineyard: camelValley, body: "I had the time of my life! RELAXING and Bob gave me a wonderful tour!")
+u2.comments.create!(rating: 5, vineyard: wykensVineyard, body: "I spent whole weekend of drinking all the finest wines! Incredible experience and just wow!")
