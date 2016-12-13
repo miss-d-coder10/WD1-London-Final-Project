@@ -125,6 +125,34 @@ wykenOwner = User.create!({
   bio: "Where you will find the finest English Wine"
 })
 
+chapeldownaccount = User.create!({
+  username: "chapel_down",
+  email: "info@chapeldown.com",
+  password: "password",
+  password_confirmation: "password",
+  profile_image: File.open(File.join(Rails.root, "db/images/chapeldown_logo.jpg")),
+  bio: "Proud British Wine Maker"
+})
+
+ridgeviewuser = User.create!({
+  username: "ridgeview",
+  email: "tamara@ridgeview.com",
+  password: "password",
+  password_confirmation: "password",
+  profile_image: File.open(File.join(Rails.root, "db/images/ridgeway_logo.gif")),
+  bio: "Proud British Wine Maker"
+})
+
+holmfirthaccount = User.create!({
+  username: "holmfirth",
+  email: "contact@holmfirth.com",
+  password: "password",
+  password_confirmation: "password",
+  profile_image: File.open(File.join(Rails.root, "db/images/holmfirth_logo.gif")),
+  bio: "Enjoy and peace and quiet with little wine love from us!"
+})
+
+
 becketts = Vineyard.create!({
   vineyard_name: "a’Beckett’s Vineyard",
   email: "http://www.abecketts.co.uk/contact/",
@@ -273,6 +301,106 @@ wykensVineyard = Vineyard.create!({
   image_three:  "/images/wyken_.image3jpg",
   image_four:  "/images/wyken_image4.jpg",
   user: wykenOwner
+})
+
+chapeldown = Vineyard.create!({
+  vineyard_name: "Chapel Down",
+  email: "sales@chapeldown.com",
+  website_url: "https://www.chapeldown.com",
+  phone: "01580 763033",
+  address: "Tenterden Vineyard, Small Hythe Rd",
+  city: "Tenterden",
+  region: "Kent",
+  postcode: "TN30 7NG",
+  country: "United Kingdom",
+  specialty: "Pinot Noir, Chardonnay, Pinot Blanc and Bacchus. Chapel Down also produces beers and ciders",
+  description: "Chapel Down produces a world-class range of sparkling and still wines, together with the award-winning range of Curious beers & cider.  Our sparkling wines are created using the Traditional Method, the same as Champagne, from fruit sourced from the South-East of England. Located in Tenterden, in the heart of the Kent countryside, the Chapel Down winery is open to the public throughout the year and welcomes over 50,000 visitors each year.  Chapel Down offers guided tours of the winery and vineyards, together with tutored tastings and gift experiences.  The winery boasts excellent visitor facilities, including an impressive restaurant and shop stocking local produce.",
+  pet_friendly: true,
+  holiday: false,
+  tours: true,
+  events: true,
+  family_friendly: true,
+  cover_image:  "/images/chapeldown_coverimage.jpg",
+  image_one:  "/images/chapeldown_image1.jpg",
+  image_two:  "/images/chapeldown_image2.jpg",
+  image_three:  "/images/chapeldown_.image3jpg",
+  image_four:  "/images/chapeldown_image4.jpg",
+  user: chapeldownaccount
+})
+
+ridgeview = Vineyard.create!({
+  vineyard_name: "Ridgeview Wine Estate",
+  email: "info@ridgeview.co.uk",
+  website_url: "http://biddendenvineyards.com",
+  phone: "01580 291726",
+  address: "Gribble Bridge Lane",
+  city: "Biddenden",
+  region: "Kent",
+  postcode: "TN27 8DF",
+  country: "United Kingdom",
+  specialty: "Chardonnay",
+  description: "Ridgeview is a family company, established in 1994 in the South Downs of Sussex in England, producing sparkling wine from traditional Champagne varieties and methods. Ridgeview have been awarded over 200 medals and 27 Trophies including English Wine of the Year four times and IWSC Best sparkling wine twice. In 2010 Ridgeview caught global attention when they received the trophy for the best sparkling wine in the Decanter World Wine Awards, the first time this has ever been awarded to a producer outside Champagne.",
+  pet_friendly: false,
+  holiday: false,
+  tours: true,
+  events: true,
+  family_friendly: true,
+  cover_image:  "/images/ridgeway_coverimage.jpg",
+  image_one:  "/images/ridgeway_image1.jpg",
+  image_two:  "/images/ridgeway_image2.jpg",
+  image_three:  "/images/ridgeway_.image3jpg",
+  image_four:  "/images/ridgeway_image4.jpg",
+  user: ridgeviewuser
+})
+
+biddenden = Vineyard.create!({
+  vineyard_name: "Biddenden Vineyards",
+  email: "info@biddendenvineyards.co.uk",
+  website_url: "http://www.ridgeview.co.uk",
+  phone: "01444 242040 ",
+  address: "Fragbarrow Lane",
+  city: "Ditchling Common",
+  region: "Sussex",
+  postcode: "BN6 8TP",
+  country: "United Kingdom",
+  specialty: "All wines, Sparkling White and Rose, and Cider and Apply Juice",
+  description: "Here at Biddenden Vineyards, Kent’s original commercial vineyard, we pride ourselves on being a family run vineyard with the second and third generation of the Barnes family managing the estate. First planted by the Barnes family in 1969, Biddenden is the oldest commerical vineyard in Kent. There are now 23 acres of south-facing slopes, situated in a shallow sheltered valley.",
+  pet_friendly: false,
+  holiday: false,
+  tours: true,
+  events: true,
+  family_friendly: true,
+  cover_image:  "/images/biddenden_coverimage.jpg",
+  image_one:  "/images/biddenden_image1.jpg",
+  image_two:  "/images/biddenden_image2.jpg",
+  image_three:  "/images/biddenden_.image3jpg",
+  image_four:  "/images/biddenden_image4.jpg",
+  user: biddendenaccount
+})
+
+holmfirth = Vineyard.create!({
+  vineyard_name: "Holmfirth Vineyard",
+  email: "contactus@holmfirthvineyard.com",
+  website_url: "http://www.holmfirthvineyard.com/",
+  phone: "01484 691861",
+  address: "Woodhouse Lane, Holmbridge",
+  city: "Holmfirth",
+  region: "West Yorkshire",
+  postcode: "HD9 2QR",
+  country: "United Kingdom",
+  specialty: "English Wines",
+  description: "Holmfirth Vineyard has been producing quality award winning English Wine since 2009 and we are constantly striving to create the best wine we can. Holmfirth vineyard has its own purpose built winery on site where we process from grape to bottle, developing our own unique English Wine.",
+  pet_friendly: false,
+  holiday: true,
+  tours: true,
+  events: true,
+  family_friendly: true,
+  cover_image:  "/images/holmfirth_coverimage.jpeg",
+  image_one:  "/images/holmfirth_image1.jpg",
+  image_two:  "/images/holmfirth_image2.jpg",
+  image_three:  "/images/holmfirth_.image3jpg",
+  image_four:  "/images/holmfirth_image4.jpg",
+  user: holmfirthaccount
 })
 
 u1.comments.create!(rating: 4, vineyard: rathfinny, body: "I love wine and to unwind, perfect place to be! Cant wait to explore more wines")
