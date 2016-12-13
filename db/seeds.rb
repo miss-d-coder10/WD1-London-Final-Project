@@ -148,7 +148,7 @@ holmfirthaccount = User.create!({
   email: "contact@holmfirth.com",
   password: "password",
   password_confirmation: "password",
-  profile_image: File.open(File.join(Rails.root, "db/images/holmfirth_logo.gif")),
+  profile_image: File.open(File.join(Rails.root, "db/images/holmfirth_logo.jpg")),
   bio: "Enjoy and peace and quiet with little wine love from us!"
 })
 
@@ -353,30 +353,30 @@ ridgeview = Vineyard.create!({
   user: ridgeviewuser
 })
 
-biddenden = Vineyard.create!({
-  vineyard_name: "Biddenden Vineyards",
-  email: "info@biddendenvineyards.co.uk",
-  website_url: "http://www.ridgeview.co.uk",
-  phone: "01444 242040 ",
-  address: "Fragbarrow Lane",
-  city: "Ditchling Common",
-  region: "Sussex",
-  postcode: "BN6 8TP",
-  country: "United Kingdom",
-  specialty: "All wines, Sparkling White and Rose, and Cider and Apply Juice",
-  description: "Here at Biddenden Vineyards, Kent’s original commercial vineyard, we pride ourselves on being a family run vineyard with the second and third generation of the Barnes family managing the estate. First planted by the Barnes family in 1969, Biddenden is the oldest commerical vineyard in Kent. There are now 23 acres of south-facing slopes, situated in a shallow sheltered valley.",
-  pet_friendly: false,
-  holiday: false,
-  tours: true,
-  events: true,
-  family_friendly: true,
-  cover_image:  "/images/biddenden_coverimage.jpg",
-  image_one:  "/images/biddenden_image1.jpg",
-  image_two:  "/images/biddenden_image2.jpg",
-  image_three:  "/images/biddenden_.image3jpg",
-  image_four:  "/images/biddenden_image4.jpg",
-  user: biddendenaccount
-})
+# biddenden = Vineyard.create!({
+#   vineyard_name: "Biddenden Vineyards",
+#   email: "info@biddendenvineyards.co.uk",
+#   website_url: "http://www.ridgeview.co.uk",
+#   phone: "01444 242040 ",
+#   address: "Fragbarrow Lane",
+#   city: "Ditchling Common",
+#   region: "Sussex",
+#   postcode: "BN6 8TP",
+#   country: "United Kingdom",
+#   specialty: "All wines, Sparkling White and Rose, and Cider and Apply Juice",
+#   description: "Here at Biddenden Vineyards, Kent’s original commercial vineyard, we pride ourselves on being a family run vineyard with the second and third generation of the Barnes family managing the estate. First planted by the Barnes family in 1969, Biddenden is the oldest commerical vineyard in Kent. There are now 23 acres of south-facing slopes, situated in a shallow sheltered valley.",
+#   pet_friendly: false,
+#   holiday: false,
+#   tours: true,
+#   events: true,
+#   family_friendly: true,
+#   cover_image:  "/images/biddenden_coverimage.jpg",
+#   image_one:  "/images/biddenden_image1.jpg",
+#   image_two:  "/images/biddenden_image2.jpg",
+#   image_three:  "/images/biddenden_.image3jpg",
+#   image_four:  "/images/biddenden_image4.jpg",
+#   user: biddendenaccount
+# })
 
 holmfirth = Vineyard.create!({
   vineyard_name: "Holmfirth Vineyard",

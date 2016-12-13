@@ -23,6 +23,7 @@ gem 'rack-cors'
 gem 'carrierwave'
 gem 'carrierwave-base64'
 gem 'fog'
+gem 'geocoder'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
