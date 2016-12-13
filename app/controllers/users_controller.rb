@@ -21,14 +21,14 @@ class UsersController < ApplicationController
     # @user = User.new(user_params)
     @user = User.new(Uploader.upload(user_params))
 
-    if @user.save
-      render json: @user, status: :created, location: @user
-    else
-      render json: @user.errors, status: :unprocessable_entity
-    end
+      if @user.save
+        render json: @user, status: :created, location: @user
+      else
+        render json: @user.errors, status: :unprocessable_entity
+      end
 
-    else
-      render json: { errors: ["Unauthorized"] }, status: 401
+      else
+        render json: { errors: ["Unauthorized"] }, status: 401
     end
 
   end

@@ -143,6 +143,15 @@ ridgeviewuser = User.create!({
   bio: "Proud British Wine Maker"
 })
 
+biddendenaccount = User.create!({
+  username: "biddenden",
+  email: "info@biddenden.com",
+  password: "password",
+  password_confirmation: "password",
+  profile_image: File.open(File.join(Rails.root, "db/images/biddenden_logo.jpg")),
+  bio: "Enjoy and peace and quiet with little wine love from us!"
+})
+
 holmfirthaccount = User.create!({
   username: "holmfirth",
   email: "contact@holmfirth.com",
@@ -151,6 +160,38 @@ holmfirthaccount = User.create!({
   profile_image: File.open(File.join(Rails.root, "db/images/holmfirth_logo.jpg")),
   bio: "Enjoy and peace and quiet with little wine love from us!"
 })
+
+hushheathUser = User.create!({
+  username: "hushheath",
+  email: "info@hushheath.com",
+  password: "password",
+  password_confirmation: "password",
+  profile_image: File.open(File.join(Rails.root, "db/images/hushheath_logo.jpg")),
+  bio: "If you want the best wine, then look no further."
+})
+
+alburyVineyard = User.create!({
+  username: "alburyVineyard",
+  email: "lucy@alburyvineyard.com",
+  password: "password",
+  password_confirmation: "password",
+  profile_image: File.open(File.join(Rails.root, "db/images/albury_logo.jpg")),
+  bio: "Feel our personalised and warm hospitality on your visit!"
+})
+
+tinwoodwine = User.create!({
+  username: "Tinwood",
+  email: "info@tinwoodestate.com",
+  password: "password",
+  password_confirmation: "password",
+  profile_image: File.open(File.join(Rails.root, "db/images/tinwood_logo.png")),
+  bio: "If you want to have a time of your life, then Tinwood is for you."
+})
+
+
+
+
+# ###################################################################
 
 
 becketts = Vineyard.create!({
@@ -331,12 +372,12 @@ chapeldown = Vineyard.create!({
 ridgeview = Vineyard.create!({
   vineyard_name: "Ridgeview Wine Estate",
   email: "info@ridgeview.co.uk",
-  website_url: "http://biddendenvineyards.com",
+  website_url: "http://www.ridgeview.co.uk",
   phone: "01580 291726",
-  address: "Gribble Bridge Lane",
-  city: "Biddenden",
-  region: "Kent",
-  postcode: "TN27 8DF",
+  address: "Fragbarrow Lane",
+  city: "Ditchling Common",
+  region: "Sussex ",
+  postcode: "BN6 8TP",
   country: "United Kingdom",
   specialty: "Chardonnay",
   description: "Ridgeview is a family company, established in 1994 in the South Downs of Sussex in England, producing sparkling wine from traditional Champagne varieties and methods. Ridgeview have been awarded over 200 medals and 27 Trophies including English Wine of the Year four times and IWSC Best sparkling wine twice. In 2010 Ridgeview caught global attention when they received the trophy for the best sparkling wine in the Decanter World Wine Awards, the first time this has ever been awarded to a producer outside Champagne.",
@@ -353,34 +394,34 @@ ridgeview = Vineyard.create!({
   user: ridgeviewuser
 })
 
-# biddenden = Vineyard.create!({
-#   vineyard_name: "Biddenden Vineyards",
-#   email: "info@biddendenvineyards.co.uk",
-#   website_url: "http://www.ridgeview.co.uk",
-#   phone: "01444 242040 ",
-#   address: "Fragbarrow Lane",
-#   city: "Ditchling Common",
-#   region: "Sussex",
-#   postcode: "BN6 8TP",
-#   country: "United Kingdom",
-#   specialty: "All wines, Sparkling White and Rose, and Cider and Apply Juice",
-#   description: "Here at Biddenden Vineyards, Kent’s original commercial vineyard, we pride ourselves on being a family run vineyard with the second and third generation of the Barnes family managing the estate. First planted by the Barnes family in 1969, Biddenden is the oldest commerical vineyard in Kent. There are now 23 acres of south-facing slopes, situated in a shallow sheltered valley.",
-#   pet_friendly: false,
-#   holiday: false,
-#   tours: true,
-#   events: true,
-#   family_friendly: true,
-#   cover_image:  "/images/biddenden_coverimage.jpg",
-#   image_one:  "/images/biddenden_image1.jpg",
-#   image_two:  "/images/biddenden_image2.jpg",
-#   image_three:  "/images/biddenden_.image3jpg",
-#   image_four:  "/images/biddenden_image4.jpg",
-#   user: biddendenaccount
-# })
+biddenden = Vineyard.create!({
+  vineyard_name: "Biddenden Vineyards",
+  email: "info@biddendenvineyards.co.uk",
+  website_url: "http://biddendenvineyards.com",
+  phone: "01444 242040 ",
+  address: " Little Whatmans Gribble Bridge Lane",
+  city: "Biddenden, Ashford",
+  region: "Kent",
+  postcode: "TN27 8DF",
+  country: "United Kingdom",
+  specialty: "All wines, Sparkling White and Rose, and Cider and Apply Juice",
+  description: "Here at Biddenden Vineyards, Kent’s original commercial vineyard, we pride ourselves on being a family run vineyard with the second and third generation of the Barnes family managing the estate. First planted by the Barnes family in 1969, Biddenden is the oldest commerical vineyard in Kent. There are now 23 acres of south-facing slopes, situated in a shallow sheltered valley.",
+  pet_friendly: false,
+  holiday: false,
+  tours: true,
+  events: true,
+  family_friendly: true,
+  cover_image:  "/images/biddenden_coverimage.jpg",
+  image_one:  "/images/biddenden_image1.jpg",
+  image_two:  "/images/biddenden_image2.jpg",
+  image_three:  "/images/biddenden_image3jpg",
+  image_four:  "/images/biddenden_image4.jpg",
+  user: biddendenaccount
+})
 
 holmfirth = Vineyard.create!({
   vineyard_name: "Holmfirth Vineyard",
-  email: "contactus@holmfirthvineyard.com",
+  email: "contact@holmfirthvineyard.com",
   website_url: "http://www.holmfirthvineyard.com/",
   phone: "01484 691861",
   address: "Woodhouse Lane, Holmbridge",
@@ -398,10 +439,88 @@ holmfirth = Vineyard.create!({
   cover_image:  "/images/holmfirth_coverimage.jpeg",
   image_one:  "/images/holmfirth_image1.jpg",
   image_two:  "/images/holmfirth_image2.jpg",
-  image_three:  "/images/holmfirth_.image3jpg",
+  image_three:  "/images/holmfirth_simage3jpg",
   image_four:  "/images/holmfirth_image4.jpg",
   user: holmfirthaccount
 })
+
+hushheath = Vineyard.create!({
+  vineyard_name: "Hush Heath Estate and Winery",
+  email: "info@hushheath.com",
+  website_url: "http://hushheath.com",
+  phone: "01622 832794",
+  address: "Five Oak Lane Junction of Snoad Lane",
+  city: "Staplehurst",
+  region: "Kent",
+  postcode: "TN12 0HT",
+  country: "United Kingdom",
+  specialty: "Balfour Brut. We also have make ciders, apple juice, Pinot Noir and Chardonnay",
+  description: "At Hush Heath Estate, we believe strongly in the mantra that the finest wines can only be produced from the finest fruit. Winemaking, therefore, starts in the vineyards. Nestled among the rolling hills, within The Garden of England, our vineyards enjoy quiet serenity and a favourable microclimate supporting optimal ripening conditions for our prized grapes. In our wines and ciders, we use only fruit grown within Hush Heath Estate, so we understand the history of each and every bottle. We feel that the best flavours and characters for sparkling wine production come from the three classic Champagne grape varieties; Chardonnay, Pinot Noir, and Pinot Meunier.",
+  pet_friendly: false,
+  holiday: false,
+  tours: true,
+  events: true,
+  family_friendly: true,
+  cover_image:  "/images/hushheath_coverimage.jpg",
+  image_one:  "/images/hushheath_image1.jpg",
+  image_two:  "/images/hushheath_image2.jpg",
+  image_three:  "/images/hushheath_image3.jpg",
+  image_four:  "/images/hushheath_image4.jpg",
+  user: hushheathUser
+})
+
+albury = Vineyard.create!({
+  vineyard_name: "Albury Organic Vineyard",
+  email: "info@alburyvineyard.com",
+  website_url: "http://www.alburyvineyard.com",
+  phone: "07768 863650",
+  address: "Shere Road",
+  city: "Albury",
+  region: "Surrey",
+  postcode: "GU5 9BW",
+  country: "United Kingdom",
+  specialty: "Albury Estate Classic Cuvée and Albury Estate Blanc de Blancs",
+  description: "Albury Organic Vineyard is situated on the southern slopes of the North Downs in the beautiful Surrey Hills, just outside Guildford on the A25 towards Dorking. The vines are the traditional Champagne varietals of Chardonnay, Pinot Noir and Pinot Meunier, as well as some Seyval and Pinot Gris. We produce English wine of the highest quality; a still rosé and quality sparkling wines, the first of which was released for sale in May 2015. We are committed to producing organic fruit without the use of chemicals such as herbicides and fungicides. Whilst copper and sulphur are permitted in organic vineyards we minimise their use. We also use compost teas, which improve the biology of the soil and biodynamic preparations. We believe that this approach, encouraging the natural biology of the land, will produce premium fruit and therefore great wine.",
+  pet_friendly: true,
+  holiday: false,
+  tours: true,
+  events: true,
+  family_friendly: true,
+  cover_image:  "/images/albury_coverimage.jpg",
+  image_one:  "/images/albury_image1.jpg",
+  image_two:  "/images/albury_image2.jpg",
+  image_three:  "/images/albury_image3.jpg",
+  image_four:  "/images/albury_image4.jpg",
+  user: alburyVineyard
+})
+
+tinwood = Vineyard.create!({
+  vineyard_name: "Tinwood Estate",
+  email: "info@tinwoodestate.com",
+  website_url: "http://www.tinwoodestate.com",
+  phone: "01243 537372",
+  address: "Tinwood Farm, Halnaker",
+  city: "Chichester",
+  region: "West Sussex",
+  postcode: "PO18 0NE",
+  country: "United Kingdom",
+  specialty: "Tinwood's Sparkling Wines",
+  description: "Located at the edge of the beautiful South Downs National Park in West Sussex, Tinwood Winery's luscious vineyards and stunning landscapes are the perfect setting for a fun day of wine tasting. Taste Tinwood's sparkling wines in the luxurious and modern tasting room and look out over the magnificent surrounding views as you enjoy your wine. Tinwood's seasoned hosts will show you all that goes into the growing of their grapes, and explain just why they consider their wines to be some of the finest English sparkling wines available.",
+  pet_friendly: false,
+  holiday: true,
+  tours: true,
+  events: true,
+  family_friendly: true,
+  cover_image:  "/images/tinwood_coverimage_edit.jpg",
+  image_one:  "/images/tinwood_image1.jpg",
+  image_two:  "/images/tinwood_image2.jpg",
+  image_three:  "/images/tinwood_image3.jpg",
+  image_four:  "/images/tinwood_image4.jpg",
+  user: tinwoodwine
+})
+
+
+####################################comments##############################
 
 u1.comments.create!(rating: 4, vineyard: rathfinny, body: "I love wine and to unwind, perfect place to be! Cant wait to explore more wines")
 u2.comments.create!(rating: 5, vineyard: rathfinny, body: "I felt at home here! I had a wonderful time. So much drinking!")
@@ -411,3 +530,6 @@ u5.comments.create!(rating: 4, vineyard: denbies, body: "Perfectness in all wine
 u6.comments.create!(rating: 2, vineyard: becketts, body: "It was quite boring! Not many to do, just drank what they have!")
 u1.comments.create!(rating: 5, vineyard: camelValley, body: "I had the time of my life! RELAXING and Bob gave me a wonderful tour!")
 u2.comments.create!(rating: 5, vineyard: wykensVineyard, body: "I spent whole weekend of drinking all the finest wines! Incredible experience and just wow!")
+u4.comments.create!(rating: 5, vineyard: biddenden, body: "Went away to unwind plus wines = HAPPINESS!.")
+u5.comments.create!(rating: 4, vineyard: holmfirth, body: "I had a great time away! Huge land and it has walking trails then drinking!")
+u3.comments.create!(rating: 5, vineyard: holmfirth, body: "Everything in one! Great walks, great view, great booze!. Met other wine lovers! It was fun!")
