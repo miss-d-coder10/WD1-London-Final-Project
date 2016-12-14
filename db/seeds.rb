@@ -289,8 +289,8 @@ camelValley = Vineyard.create!({
   cover_image:  "/images/camelvalley_coverimage.jpg",
   image_one:  "/images/camelvalley_image1.jpg",
   image_two:  "/images/camelvalley_image2.jpg",
-  image_three:  "/images/camelvalley_.image3jpg",
-  image_four:  "/images/camelvalley_image4.jpg",
+  image_three:  "/images/camelvalley_image3.jpg",
+  image_four:  "/images/camelvalley_image4.jpeg",
   user: camelValleyOwner
 })
 
@@ -314,7 +314,7 @@ threeChoirs = Vineyard.create!({
   cover_image:  "/images/threechoirs_coverimage.jpg",
   image_one:  "/images/threechoirs_image5.jpg",
   image_two:  "/images/threechoirs_image2.jpg",
-  image_three:  "/images/threechoirs_.image3jpg",
+  image_three:  "/images/threechoirs_image3.jpg",
   image_four:  "/images/threechoirs_image4.jpg",
   user: threeChoirsOwner
 })
@@ -364,7 +364,7 @@ chapeldown = Vineyard.create!({
   cover_image:  "/images/chapeldown_coverimage.jpg",
   image_one:  "/images/chapeldown_image1.jpg",
   image_two:  "/images/chapeldown_image2.jpg",
-  image_three:  "/images/chapeldown_.image3jpg",
+  image_three:  "/images/chapeldown_image3.jpg",
   image_four:  "/images/chapeldown_image4.jpg",
   user: chapeldownaccount
 })
@@ -389,7 +389,7 @@ ridgeview = Vineyard.create!({
   cover_image:  "/images/ridgeway_coverimage.jpg",
   image_one:  "/images/ridgeway_image1.jpg",
   image_two:  "/images/ridgeway_image2.jpg",
-  image_three:  "/images/ridgeway_.image3jpg",
+  image_three:  "/images/ridgeway_image3.jpg",
   image_four:  "/images/ridgeway_image4.jpg",
   user: ridgeviewuser
 })
@@ -414,7 +414,7 @@ biddenden = Vineyard.create!({
   cover_image:  "/images/biddenden_coverimage.jpg",
   image_one:  "/images/biddenden_image1.jpg",
   image_two:  "/images/biddenden_image2.jpg",
-  image_three:  "/images/biddenden_image3jpg",
+  image_three:  "/images/biddenden_image3.jpg",
   image_four:  "/images/biddenden_image4.jpg",
   user: biddendenaccount
 })
@@ -439,7 +439,7 @@ holmfirth = Vineyard.create!({
   cover_image:  "/images/holmfirth_coverpage.jpeg",
   image_one:  "/images/holmfirth_image1.jpg",
   image_two:  "/images/holmfirth_image2.jpg",
-  image_three:  "/images/holmfirth_simage3jpg",
+  image_three:  "/images/holmfirth_simage3.jpg",
   image_four:  "/images/holmfirth_image4.jpg",
   user: holmfirthaccount
 })
