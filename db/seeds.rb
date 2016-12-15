@@ -17,7 +17,7 @@ u1 = User.create!({
   email: "natalie.pateman@gmail.com",
   password: "password",
   password_confirmation: "password",
-  profile_image: File.open(File.join(Rails.root, "db/images/avatar_default.png")),
+  profile_image: File.open(File.join(Rails.root, "db/images/avatar_dog.jpg")),
   bio: "I love all wines"
 })
 u2 = User.create!({
@@ -25,7 +25,7 @@ u2 = User.create!({
   email: "emily.isacke@ga.co",
   password: "password",
   password_confirmation: "password",
-  profile_image: File.open(File.join(Rails.root, "db/images/avatar_default.png")),
+  profile_image: File.open(File.join(Rails.root, "db/images/avatar_baby.jpeg")),
   bio: "I love fine wine"
 })
 u3 = User.create!({

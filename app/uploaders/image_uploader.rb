@@ -15,4 +15,9 @@ class ImageUploader < CarrierWave::Uploader::Base
   def store_dir
     nil
   end
+
+  def default_url(*args)
+    "/images/avatar_default.png"
+  end
+
 end
