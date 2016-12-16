@@ -107,6 +107,7 @@ camelValleyOwner = User.create!({
   bio: "We produce World Class Wines."
 })
 
+
 threeChoirsOwner = User.create!({
   username: "three_choirs_wickham",
   email: "kevin@threechoirs.com",
@@ -314,7 +315,7 @@ threeChoirs = Vineyard.create!({
   cover_image:  "/images/threechoirs_coverimage.jpg",
   image_one:  "/images/threechoirs_image5.jpg",
   image_two:  "/images/threechoirs_image2.jpg",
-  image_three:  "/images/threechoirs_image3.jpg",
+  image_three:  "/images/threechoir_image3.jpg",
   image_four:  "/images/threechoirs_image4.jpg",
   user: threeChoirsOwner
 })
@@ -339,7 +340,7 @@ wykensVineyard = Vineyard.create!({
   cover_image:  "/images/wykens_coverimage2.jpg",
   image_one:  "/images/wyken_image1.jpg",
   image_two:  "/images/wyken_image2.jpg",
-  image_three:  "/images/wyken_.image3jpg",
+  image_three:  "/images/wyken_image3.jpg",
   image_four:  "/images/wyken_image4.jpg",
   user: wykenOwner
 })
@@ -439,8 +440,8 @@ holmfirth = Vineyard.create!({
   cover_image:  "/images/holmfirth_coverpage.jpeg",
   image_one:  "/images/holmfirth_image1.jpg",
   image_two:  "/images/holmfirth_image2.jpg",
-  image_three:  "/images/holmfirth_simage3.jpg",
-  image_four:  "/images/holmfirth_image4.jpg",
+  image_three:  "/images/holmfirth_image3.jpg",
+  image_four:  "/images/holmfirth_images4.jpg",
   user: holmfirthaccount
 })
 
