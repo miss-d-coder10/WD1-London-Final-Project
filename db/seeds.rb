@@ -534,3 +534,6 @@ u2.comments.create!(rating: 5, vineyard: wykensVineyard, body: "I spent whole we
 u4.comments.create!(rating: 5, vineyard: biddenden, body: "Went away to unwind plus wines = HAPPINESS!.")
 u5.comments.create!(rating: 4, vineyard: holmfirth, body: "I had a great time away! Huge land and it has walking trails then drinking!")
 u3.comments.create!(rating: 5, vineyard: holmfirth, body: "Everything in one! Great walks, great view, great booze!. Met other wine lovers! It was fun!")
+u2.comments.create!(rating: 5, vineyard: camelValley, body: "I love this place, I love all their wines and got to unwind after taking on WD23!")
+u4.comments.create!(rating: 5, vineyard: camelValley, body: "All I remember is GOOD WINE AND GOOD COMPANY!")
+u3.comments.create!(rating: 4, vineyard: camelValley, body: "Good wine, Good Place, Got to unwind, what else will you look for!")
